@@ -1,0 +1,30 @@
+# Langchain Agent
+langchain
+openai
+langchain-openai
+langchain_openai
+langchain-mongodb
+langchain_experimental
+langgraph
+langchain_community
+langmem
+langchain-tavily
+langgraph_supervisor
+langgraph-checkpoint-sqlite
+
+# Langchain Tool agent
+langchain
+pydantic
+python-dotenv
+
+# Jupyter
+ipykernel
+ipython
+
+dotenv
+typing
+
+# MCP
+mcp[cli]==1.13.1
+ipykernel
+httpx
