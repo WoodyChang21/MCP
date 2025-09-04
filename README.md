@@ -6,6 +6,15 @@ A comprehensive guide to learning and implementing Model Context Protocol (MCP) 
 
 This repository is organized in a logical progression that takes you from MCP basics to advanced implementations:
 
+## What You'll Build
+
+By the end of this tutorial, you'll have built a **production-ready Streamlit application** that demonstrates the full power of MCP + LangChain integration:
+
+![Tako MCP Demo](tako_mcp.gif)
+
+**Ready to build this?** Check out the [03 - LangChain Third-Party Integrations](./03-langchain-third-party-integrations/) section!
+
+
 ### [01 - MCP Fundamentals](./01-mcp-fundamentals/)
 **Start here if you're new to MCP**
 - Complete MCP crash course with hands-on examples
@@ -45,14 +54,6 @@ This repository is organized in a logical progression that takes you from MCP ba
 - **Tool Development**: Creating and implementing MCP tools
 - **Production Deployment**: Real-world MCP applications with LangChain
 - **Third-Party Integration**: Using existing MCP solutions with LangChain agents
-
-## What You'll Build
-
-By the end of this tutorial, you'll have built a **production-ready Streamlit application** that demonstrates the full power of MCP + LangChain integration:
-
-![Tako MCP Demo](tako_mcp.gif)
-
-**Ready to build this?** Check out the [03 - LangChain Third-Party Integrations](./03-langchain-third-party-integrations/) section!
 
 ## Prerequisites
 
