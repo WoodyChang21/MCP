@@ -1,0 +1,3 @@
+[submodule "LangChain_ThirdParty/tako-mcp"]
+	path = LangChain_ThirdParty/tako-mcp
+	url = https://github.com/TakoData/tako-mcp.git
