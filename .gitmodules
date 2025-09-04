@@ -1,3 +1,9 @@
 [submodule "LangChain_ThirdParty/tako-mcp"]
 	path = LangChain_ThirdParty/tako-mcp
 	url = https://github.com/WoodyChang21/tako-mcp.git
+[submodule "MCP_101/ai-cookbook"]
+	path = mcp-tutorials/ai-cookbook
+	url = https://github.com/daveebbelaar/ai-cookbook.git
+[submodule "mcp-tutorials/ai-cookbook"]
+	path = mcp-tutorials/ai-cookbook
+	url = https://github.com/daveebbelaar/ai-cookbook.git
