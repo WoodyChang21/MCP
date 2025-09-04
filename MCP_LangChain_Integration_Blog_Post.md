@@ -120,6 +120,25 @@ In this section, we'll demonstrate integrating the Tako MCP server into our Lang
 
 ### 3.3: Implementation with Tako MCP Server
 
+**Prerequisites: Launch the Tako MCP Server**
+
+Before implementing the client, you need to clone and launch the Tako MCP server. I've created an enhanced version with Docker Compose configuration that makes it easy to set up and run. The Tako MCP server runs as a Docker container and provides the data visualization capabilities that our LangChain agent will connect to.
+
+```bash
+# Clone the Tako MCP server with Docker Compose setup
+git clone https://github.com/WoodyChang21/tako-mcp.git
+cd tako-mcp
+
+# Configure environment variables
+cp .env.example .env
+# Edit .env and add your TAKO_API_KEY
+
+# Launch the MCP server using Docker Compose
+docker-compose up -d
+```
+
+The server will be available at `http://localhost:8002/mcp` and can be connected to using the `streamable_http` transport method. For a complete step-by-step guide, see the [Third-Party Integrations section](https://github.com/WoodyChang21/MCP/tree/main/03-langchain-third-party-integrations) in my GitHub repository.
+
 Here's the working pseudo code for integrating Tako MCP server with LangChain, based on the complete implementation in the [Third-Party Integrations section](https://github.com/WoodyChang21/MCP/tree/main/03-langchain-third-party-integrations):
 
 #### Tako MCP Server Connection
@@ -230,7 +249,7 @@ The complete implementation results in a production-ready chatbot that demonstra
 - **Persistent Memory**: Conversation history and context retention
 - **Professional UI**: Clean, responsive Streamlit interface
 
-![Tako MCP Demo](https://github.com/WoodyChang21/MCP/blob/main/tako_mcp.gif)
+![Tako MCP Demo](https://raw.githubusercontent.com/WoodyChang21/MCP/main/tako_mcp.gif)
 
 *The demo shows the agent processing complex data queries, generating interactive visualizations, and providing comprehensive analysis - all powered by MCP server integration.*
 
