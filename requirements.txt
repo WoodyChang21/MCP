@@ -11,11 +11,13 @@ langmem
 langchain-tavily
 langgraph_supervisor
 langgraph-checkpoint-sqlite
+langchain-mcp-adapters>=0.1.0
 
 # Langchain Tool agent
 langchain
 pydantic
 python-dotenv
+streamlit>=1.28.0
 
 # Jupyter
 ipykernel
@@ -23,6 +25,7 @@ ipython
 
 dotenv
 typing
+asyncio
 
 # MCP
 mcp[cli]==1.13.1

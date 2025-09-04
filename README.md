@@ -61,8 +61,8 @@ By the end of this tutorial, you'll have built a **Streamlit application** that 
 - Understanding of APIs and web services
 - Docker (for some advanced examples)
 - Git (for cloning and version control)
-- **OpenAI API Key** (for LangChain integrations)
-- **Tako API Key** (for data visualization examples)
+- **OpenAI API Key and Deployment Name** (for LangChain integrations)
+- **Tako API Key** (for data visualization examples in tako-mcp submodule)
 
 ## Installation & Setup
 
@@ -72,7 +72,16 @@ By the end of this tutorial, you'll have built a **Streamlit application** that 
    cd mcp
    ```
 
-2. **Set up Python environment**:
+2. **Initialize submodules** (Important!):
+   ```bash
+   # This repository contains submodules that need to be initialized
+   git submodule update --init --recursive
+   
+   # Or if you want to pull latest changes with submodules
+   git pull --recurse-submodules
+   ```
+
+3. **Set up Python environment**:
    ```bash
    # Create virtual environment
    python -m venv .venv
@@ -84,12 +93,18 @@ By the end of this tutorial, you'll have built a **Streamlit application** that 
 
 3. **Configure API keys**:
    ```bash
-   # Create .env file in the root directory
+   # Create .env file in the root directory for main project
    touch .env
    
-   # Add your API keys
+   # Add your OpenAI API key and deployment name
    echo "OPENAI_API_KEY=your_openai_key_here" >> .env
+   echo "OPENAI_DEPLOYMENT_NAME=your_deployment_name_here" >> .env
+   
+   # Configure Tako API key in the tako-mcp submodule
+   cd 03-langchain-third-party-integrations/tako-mcp
+   touch .env
    echo "TAKO_API_KEY=your_tako_key_here" >> .env
+   cd ../..
    ```
 
 ## How to Use This Repository
@@ -104,6 +119,10 @@ By the end of this tutorial, you'll have built a **Streamlit application** that 
 
 ### Common Issues
 
+- **Missing Content/Empty Folders**: If you see empty folders like `tako-mcp`, you need to initialize submodules:
+  ```bash
+  git submodule update --init --recursive
+  ```
 - **Import Errors**: Ensure you're in the correct directory and virtual environment is activated
 - **API Key Issues**: Verify your `.env` file is in the root directory and contains valid API keys
 - **Docker Issues**: Ensure Docker is running and you have sufficient permissions
